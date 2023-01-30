@@ -19,14 +19,14 @@ int main() {
 
 	// replace text and print result
 	replaceAllOccurences(text, searchTerm, replacementTerm);
-	cout << text << endl;
+	cout << "\n" << text << "\n\n";
 
 	// test if text is palindrome
 	if (isPalindrome(text)) {
 		cout << "Input is a palindrome";
 	}
 	else {
-		cout << "Input is a palindrome";
+		cout << "Input is not a palindrome";
 	}
 	return 0;
 }
@@ -39,7 +39,7 @@ void replaceAllOccurences(string& text, const string& from, const string& to) {
 	while ((startPos = text.find(from, startPos)) != string::npos) {
 		// replace
 		text.replace(startPos, from.length(), to);
-		// and forward seek curor by word length 
+		// and forward seek cursor by word length 
 		startPos += to.length();
 	}
 }
