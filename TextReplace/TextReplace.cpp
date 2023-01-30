@@ -9,6 +9,7 @@ bool isPalindrome(const string text);
 int main() {
 	string text, searchTerm, replacementTerm;
 
+	// read inputs
 	cout << "Enter the text you want to modify: ";
 	getline(cin, text);
 	cout << "Enter the search term: ";
@@ -16,10 +17,11 @@ int main() {
 	cout << "Enter the replacement term: ";
 	getline(cin, replacementTerm);
 
+	// replace text and print result
 	replaceAllOccurences(text, searchTerm, replacementTerm);
-
 	cout << text << endl;
 
+	// test if text is palindrome
 	if (isPalindrome(text)) {
 		cout << "Input is a palindrome";
 	}
@@ -32,13 +34,13 @@ int main() {
 // replaces all occurences within a string n times
 void replaceAllOccurences(string& text, const string& from, const string& to) {
 	// start offset
-	size_t start_pos = 0;
+	size_t startPos = 0;
 	// as long as there are occurences
-	while ((start_pos = text.find(from, start_pos)) != string::npos) {
+	while ((startPos = text.find(from, startPos)) != string::npos) {
 		// replace
-		text.replace(start_pos, from.length(), to);
+		text.replace(startPos, from.length(), to);
 		// and forward seek curor by word length 
-		start_pos += to.length();
+		startPos += to.length();
 	}
 }
 
