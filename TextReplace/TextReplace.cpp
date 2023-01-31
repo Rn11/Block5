@@ -4,7 +4,7 @@
 using namespace std;
 
 void replaceAllOccurences(string& text, const string& from, const string& to);
-bool isPalindrome(const string text);
+bool isPalindrome(const string& text);
 
 int main() {
 	string text, searchTerm, replacementTerm;
@@ -22,12 +22,7 @@ int main() {
 	cout << "\n" << text << "\n\n";
 
 	// test if text is palindrome
-	if (isPalindrome(text)) {
-		cout << "Input is a palindrome";
-	}
-	else {
-		cout << "Input is not a palindrome";
-	}
+	cout << (isPalindrome(text) ? "Input is a palindrome" : "Input is not a palindrome") << endl;
 	return 0;
 }
 
@@ -45,21 +40,19 @@ void replaceAllOccurences(string& text, const string& from, const string& to) {
 }
 
 // use two cursors to read from both ends, compare and return false in case of mismatch
-bool isPalindrome(const string text) {
-	int n = text.length(), j = n - 1;
-	int i = 0;
-	while (i < j) {
+bool isPalindrome(const string& text) {
+	int right = text.length() - 1;
+	int left = 0;
+	while (left < right) {
 		// skip all non-alnum chars
-		while (i < n && !isalnum(text[i])) {
-			i++;
+		while ((left < text.length() / 2) && !isalnum(text[left])) {
+			left++;
 		}
-		while (j >= 0 && !isalnum(text[j])) {
-			j--;
+		while ((right > text.length() / 2) && !isalnum(text[right])) {
+			right--;
 		}
 		// check for mismatch in chars (not a palindrome)
-		if (i < j && tolower(text[i++]) != tolower(text[j--])) {
-			return false;
-		}
+		if (left < right && tolower(text[left++]) != tolower(text[right--])) return false;
 	}
 	return true;
 }
