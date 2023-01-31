@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Passwort-manager", "Passwort-manager\Passwort-manager.vcxproj", "{F0C248DA-6391-4A44-A269-15B40B5A98D0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Password-manager", "Passwort-manager\Passwort-manager.vcxproj", "{F0C248DA-6391-4A44-A269-15B40B5A98D0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextReplace", "TextReplace\TextReplace.vcxproj", "{F05EA097-CB46-4427-ACF5-DF4385B5E4D3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeapSort", "HeapSort\HeapSort.vcxproj", "{193040AA-8191-4856-AB40-03217A912D72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{F05EA097-CB46-4427-ACF5-DF4385B5E4D3}.Release|x64.Build.0 = Release|x64
 		{F05EA097-CB46-4427-ACF5-DF4385B5E4D3}.Release|x86.ActiveCfg = Release|Win32
 		{F05EA097-CB46-4427-ACF5-DF4385B5E4D3}.Release|x86.Build.0 = Release|Win32
+		{193040AA-8191-4856-AB40-03217A912D72}.Debug|x64.ActiveCfg = Debug|x64
+		{193040AA-8191-4856-AB40-03217A912D72}.Debug|x64.Build.0 = Debug|x64
+		{193040AA-8191-4856-AB40-03217A912D72}.Debug|x86.ActiveCfg = Debug|Win32
+		{193040AA-8191-4856-AB40-03217A912D72}.Debug|x86.Build.0 = Debug|Win32
+		{193040AA-8191-4856-AB40-03217A912D72}.Release|x64.ActiveCfg = Release|x64
+		{193040AA-8191-4856-AB40-03217A912D72}.Release|x64.Build.0 = Release|x64
+		{193040AA-8191-4856-AB40-03217A912D72}.Release|x86.ActiveCfg = Release|Win32
+		{193040AA-8191-4856-AB40-03217A912D72}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

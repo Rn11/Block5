@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Password-manager.cpp">
+    <ClCompile Include="HeapSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
